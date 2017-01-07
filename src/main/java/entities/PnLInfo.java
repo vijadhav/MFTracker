@@ -54,4 +54,15 @@ public class PnLInfo {
     public void setPnlPercentage(double pnlPercentage) {
         this.pnlPercentage = pnlPercentage;
     }
+
+    @Override
+    public String toString() {
+        return "PnLInfo{" +
+                "holding=" + holding +
+                ", ltp=" + ltp +
+                ", currentValue=" + currentValue +
+                ", pnlAmount=" + pnlAmount +
+                ", pnlPercentage=" + pnlPercentage +
+                '}';
+    }
 }

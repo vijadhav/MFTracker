@@ -15,6 +15,15 @@ public class Holding {
 
     private static long LOT_SIZE = 1;
 
+    public Holding() {}
+
+    public Holding(Instrument instrument, long qty, double averageCostPrice) {
+        this.instrument = instrument;
+        this.qty = qty;
+        this.averageCostPrice = averageCostPrice;
+        this.value = qty * averageCostPrice;
+    }
+
     public Instrument getInstrument() {
         return instrument;
     }
@@ -45,5 +54,15 @@ public class Holding {
 
     public void setValue(double value) {
         this.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return "Holding{" +
+                "instrument=" + instrument +
+                ", qty=" + qty +
+                ", averageCostPrice=" + averageCostPrice +
+                ", value=" + value +
+                '}';
     }
 }

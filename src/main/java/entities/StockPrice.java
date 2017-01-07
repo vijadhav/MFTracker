@@ -20,6 +20,10 @@ public class StockPrice {
     private double yearHigh;
     private double yearLow;
 
+    public StockPrice(String symbol) {
+        this.symbol = symbol;
+    }
+
     public String getSymbol() {
         return symbol;
     }
@@ -98,5 +102,15 @@ public class StockPrice {
 
     public void setYearLow(double yearLow) {
         this.yearLow = yearLow;
+    }
+
+    @Override
+    public String toString() {
+        return "StockPrice{" +
+                "symbol='" + symbol + '\'' +
+                ", ltp=" + ltp +
+                ", chng=" + chng +
+                ", chngPct=" + chngPct +
+                '}';
     }
 }
